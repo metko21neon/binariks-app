@@ -1,5 +1,18 @@
-<ul>
-    <li *ngFor="let album of albums">
-        <p>Album title: {{album?.title}}</p>
-    </li>
-</ul>
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="jumbotron">
+                <h2>Albums</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li *ngFor="let album of albums">
+                        <a routerLink="/album/{{album.id}}">
+                            <p>Album title: {{album?.title}}</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

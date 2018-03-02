@@ -12,7 +12,11 @@ export class AlbumsComponent implements OnInit {
     constructor(private configService: ConfigService) { }
 
     ngOnInit() {
-        this.configService.getData().subscribe((data: Albums) => this.albums = data);
+        this.getAlbums();
     }
 
+    getAlbums(): void {
+        this.configService.getAlbums()
+            .subscribe((data: Albums) => this.albums = data);
+    }
 }

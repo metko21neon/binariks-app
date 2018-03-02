@@ -6,17 +6,21 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { ConfigService } from './config.service';
+import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        AlbumsComponent
+        AlbumsComponent,
+        AlbumDetailComponent
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
-        NgbModule.forRoot()
+        NgbModule.forRoot(),
+        AppRoutingModule
     ],
     providers: [ConfigService],
     bootstrap: [AppComponent]

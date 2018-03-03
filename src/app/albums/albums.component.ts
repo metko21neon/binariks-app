@@ -8,6 +8,7 @@ import { Albums } from '../albums.model';
     styleUrls: ['./albums.component.sass']
     })
 export class AlbumsComponent implements OnInit {
+    p: number = 1;
     albums: Albums;
     constructor(private configService: ConfigService) { }
 

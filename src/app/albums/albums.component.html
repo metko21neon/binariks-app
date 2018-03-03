@@ -6,12 +6,13 @@
             </div>
             <div class="card-body">
                 <ul>
-                    <li *ngFor="let album of albums">
+                    <li *ngFor="let album of albums | paginate: { itemsPerPage: 10, currentPage: p }">
                         <a routerLink="/album/{{album.id}}">
                             <p>Album title: {{album?.title}}</p>
                         </a>
                     </li>
                 </ul>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
             </div>
         </div>
     </div>

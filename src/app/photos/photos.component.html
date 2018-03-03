@@ -1,19 +1,15 @@
 <div class="row">
-    <div class="col-md-8 offset-md-2">
-        <div class="card">
+    <div class="col-md-6 offset-md-3">
+        <div class="card photos-card">
+            <button class="btn btn-light btn-back" (click)="goBack()">go back</button>
             <div class="row">
-                <div class="col-md-6">
-                    <img [src]="photos?.thumbnailUrl" alt="">
+                <div class="col-md-4">
+                    <img *ngIf="photos" [src]="photos?.thumbnailUrl" alt="">
                 </div>
-                <div class="col-md-6">
-                    <h2>Id item: {{photos?.id}}</h2>
-                </div>
-                <div class="col-md-12">
-                    <h2>Title item:</h2>
-                    <p>{{photos?.title}}</p>
+                <div class="col-md-8">
+                    <h5 class="header__h5">{{photos?.title}}</h5>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<button class="btn btn-dark btn-back" (click)="goBack()">go back</button>

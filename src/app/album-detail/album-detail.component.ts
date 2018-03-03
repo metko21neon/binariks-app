@@ -12,6 +12,7 @@ import { AlbumId } from '../album-id.model';
   styleUrls: ['./album-detail.component.sass']
 })
 export class AlbumDetailComponent implements OnInit {
+    p: number = 1;
     id;
     private sub: any;
     @Input() albums: Albums;
